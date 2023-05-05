@@ -1,0 +1,71 @@
+<html>
+<head>
+<title> Club Application Register </title>
+<link type="text/css" rel="stylesheet" href="css.css">
+</head>
+<body bgcolor=black>
+<center><h1><u> Club Join Application</u> </h1></center>
+<center><img src="logo.jpg" width="150px" height="200px"></center>
+<hr>
+<div class="row">
+		<div class="column">
+	<div class="form">
+<h1>Please make sure that all the next information are valid</h1>
+  <form action="">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+	
+	<label for="age">Age</label>
+    <input type="text" id="age" name="age" maxlength="2" placeholder="Your Age..">
+	
+	<label for="country">Country</label>
+    <input type="text" id="country" name="country" placeholder="Your Country..">
+	
+	<label for="city">City</label>
+    <input type="text" id="city" name="city" placeholder="Your City..">
+	
+	<label for="adress">Adress</label>
+    <input type="text" id="adress" name="adress" placeholder="Your Adress..">
+
+    <label for="type">Type</label>
+    <select id="type" name="Type">
+      <option value="nale">Male</option>
+      <option value="female">Female</option>
+      <option value="else">Prefere not to say</option>
+    </select>
+	
+	<label for="exp">Experiances</label>
+    <input type="text" id="exp" name="exp" placeholder="Talk About yourself..">
+		</form>
+	<center><button class="button" onClick="myFunction()">Send Application</button>
+	</div>
+</div>
+<div class="column">
+	<div class="text">
+<h1> Club Rules </h1>
+<b><ol>
+<li> Age must be less than 28 Years old </li>
+<li> Must agree all club conditions and terms </li>
+<li> Must wear the club uniform, and banned using other club's </li>
+<li> You must be loyal for the club and stay in it at least 3 years </li>
+</ol></b>
+		</div>
+	<center><h1 id="msg"></h1></center>
+	</div>
+</div>
+</body>
+<script>
+function myFunction() {
+  var txt;
+  if (confirm("Are you sure to send your request?")) {
+    txt = "Request has been sent !";
+  } else {
+    txt = "Request has been cancelled";
+  }
+  document.getElementById("msg").innerHTML = txt;
+}
+</script>
+</html>
